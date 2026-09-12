@@ -184,7 +184,7 @@ CLIENT_URL="http://localhost:3000"`,
               <>
                 <Sparkles className="w-3.5 h-3.5 text-[#5fafd7] shrink-0" />
                 <span>
-                  <strong className="text-white">Zero Configuration:</strong> No database or local backend required. Connects to Lumina Cloud.
+                  <strong className="text-white">Zero Configuration:</strong> No manual API keys, local database, or backend required. Built-in cloud AI ready out of the box.
                 </span>
               </>
             ) : (

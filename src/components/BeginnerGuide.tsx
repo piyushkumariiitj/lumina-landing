@@ -57,9 +57,9 @@ export default function BeginnerGuide() {
 
   const jargonCards = [
     {
-      term: "Zero Client-Side Secrets",
+      term: "Zero Manual API Keys",
       simpleExplanation:
-        "You do not need to configure databases, API keys, or server ports. Lumina CLI connects securely to production cloud infrastructure right out of the box.",
+        "You never have to register, generate, or paste API keys manually. Lumina CLI uses built-in cloud AI inference right out of the box with zero setup.",
     },
     {
       term: "RFC 8628 Device Flow",

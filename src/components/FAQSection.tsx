@@ -33,9 +33,9 @@ export default function FAQSection() {
     },
     {
       category: "AI & Tools",
-      question: "Where do I get a free Groq API key?",
+      question: "Do I need to provide or enter an API key?",
       answer:
-        "You can get a 100% free API key in seconds from Groq Cloud Console at https://console.groq.com/keys. Lumina uses Groq's high-speed LPU inference engine to deliver instant, sub-second reasoning.",
+        "No! Lumina comes with built-in AI inference right out of the box. You never have to create, copy, or enter any API keys manually — simply log in with GitHub via `lumina login` and start coding with instant Groq LPU sub-second reasoning.",
     },
     {
       category: "AI & Tools",

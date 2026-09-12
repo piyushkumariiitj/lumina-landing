@@ -94,7 +94,7 @@ export default function HeroSection() {
           </div>
 
           <p className="text-xs text-[#64748b] font-mono pt-1">
-            Zero configuration • Connects to cloud backend automatically
+            Zero configuration • No API key needed • Connects to cloud automatically
           </p>
         </div>
 
