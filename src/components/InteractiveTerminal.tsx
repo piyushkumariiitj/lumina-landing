@@ -69,7 +69,7 @@ export default function InteractiveTerminal() {
     const baseBanner: TerminalLine = {
       id: generateLineId("banner"),
       type: "banner",
-      content: `✦ Lumina CLI v1.0.4 • openai/gpt-oss-120b\n  ✦ Developer <Active User>\n  • Engine: Groq LPU Inference  • Status: Active (Connected to Cloud)`,
+      content: `✦ Lumina CLI v1.0.5 • openai/gpt-oss-120b\n  ✦ Developer <Active User>\n  • Engine: Groq LPU Inference  • Status: Active (Connected to Cloud)`,
     };
 
     if (mode === "chat") {

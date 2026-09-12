@@ -53,7 +53,7 @@ export default function CommandReference() {
       options: "-v",
       type: "Utility",
       category: "CLI",
-      description: "Output currently installed version of Lumina CLI (e.g. v1.0.4).",
+      description: "Output currently installed version of Lumina CLI (e.g. v1.0.5).",
       example: "lumina --version",
     },
     {

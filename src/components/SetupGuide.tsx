@@ -32,7 +32,7 @@ export default function SetupGuide() {
       title: "Global Install",
       badge: "npm",
       description: "Install the CLI globally to enable the lumina command in any terminal.",
-      code: `npm install -g @piyushkumariiitj/lumina-cli\n\n# Verify\nlumina --version`,
+      code: `npm install -g @piyushkumariiitj/lumina-cli@latest\n\n# Or instant run:\nnpx @piyushkumariiitj/lumina-cli@latest wakeup`,
     },
     {
       id: "user-2",

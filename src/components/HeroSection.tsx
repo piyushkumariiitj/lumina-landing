@@ -12,11 +12,14 @@ import {
 
 export default function HeroSection() {
   const [copied, setCopied] = useState(false);
+  const [cmdMode, setCmdMode] = useState<"install" | "npx">("install");
 
-  const command = "npm install -g @piyushkumariiitj/lumina-cli";
+  const installCmd = "npm install -g @piyushkumariiitj/lumina-cli@latest";
+  const npxCmd = "npx @piyushkumariiitj/lumina-cli@latest wakeup";
+  const activeCmd = cmdMode === "install" ? installCmd : npxCmd;
 
   const copyCommand = () => {
-    navigator.clipboard.writeText(command);
+    navigator.clipboard.writeText(activeCmd);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -27,7 +30,7 @@ export default function HeroSection() {
         {/* Minimal Pill Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#111624] border border-[#1e2638] text-xs font-mono text-[#cbd5e1]">
           <span className="text-[#e8b339]">✦</span>
-          <span>Lumina CLI v1.0.4</span>
+          <span>Lumina CLI v1.0.5</span>
           <span className="text-[#64748b]">•</span>
           <span className="text-[#5fd787]">Groq LPU Engine</span>
         </div>
@@ -44,11 +47,11 @@ export default function HeroSection() {
         </div>
 
         {/* Minimal Command Bar */}
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto space-y-2">
           <div className="p-2 sm:p-2.5 rounded-2xl bg-[#090d16] border border-[#1e2638] flex items-center justify-between gap-3 shadow-xl">
             <div className="flex items-center gap-3 overflow-x-auto pl-2 font-mono text-xs sm:text-sm">
               <span className="text-[#5fd75f] font-bold select-none">$</span>
-              <span className="text-white whitespace-nowrap">{command}</span>
+              <span className="text-white whitespace-nowrap">{activeCmd}</span>
             </div>
 
             <button
@@ -58,7 +61,7 @@ export default function HeroSection() {
               {copied ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-[#5fd787]" />
-                  <span className="text-[#5fd787]">Copied</span>
+                  <span className="text-[#5fd787]">Copied!</span>
                 </>
               ) : (
                 <>
@@ -68,7 +71,29 @@ export default function HeroSection() {
               )}
             </button>
           </div>
-          <p className="text-xs text-[#64748b] font-mono mt-2.5">
+
+          {/* Quick Toggle between Global Install and Instant NPX */}
+          <div className="flex items-center justify-center gap-4 text-xs font-mono text-[#64748b]">
+            <button
+              onClick={() => setCmdMode("install")}
+              className={`hover:text-white transition-colors cursor-pointer ${
+                cmdMode === "install" ? "text-[#e8b339] font-bold underline underline-offset-4" : ""
+              }`}
+            >
+              npm install -g
+            </button>
+            <span>•</span>
+            <button
+              onClick={() => setCmdMode("npx")}
+              className={`hover:text-white transition-colors cursor-pointer ${
+                cmdMode === "npx" ? "text-[#5fd787] font-bold underline underline-offset-4" : ""
+              }`}
+            >
+              npx instant run (no install)
+            </button>
+          </div>
+
+          <p className="text-xs text-[#64748b] font-mono pt-1">
             Zero configuration • Connects to cloud backend automatically
           </p>
         </div>

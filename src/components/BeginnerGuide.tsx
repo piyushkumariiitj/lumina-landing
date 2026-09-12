@@ -23,7 +23,7 @@ export default function BeginnerGuide() {
   const [copied, setCopied] = useState(false);
 
   const copyQuickStart = () => {
-    navigator.clipboard.writeText("npm install -g @piyushkumariiitj/lumina-cli");
+    navigator.clipboard.writeText("npm install -g @piyushkumariiitj/lumina-cli@latest");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -34,8 +34,8 @@ export default function BeginnerGuide() {
       title: "Install Globally via npm",
       badge: "One Command",
       description: "Open your terminal on macOS, Linux, or Windows and install Lumina CLI globally:",
-      code: "npm install -g @piyushkumariiitj/lumina-cli",
-      tip: "Or run instantly without installing: npx @piyushkumariiitj/lumina-cli wakeup",
+      code: "npm install -g @piyushkumariiitj/lumina-cli@latest",
+      tip: "Or run instantly without installing: npx @piyushkumariiitj/lumina-cli@latest wakeup",
     },
     {
       stepNumber: "2",
@@ -210,7 +210,7 @@ export default function BeginnerGuide() {
             className="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#e8b339] to-[#f59e0b] text-[#07090e] font-extrabold text-sm hover:brightness-110 glow-amber transition-all cursor-pointer"
           >
             <Terminal className="w-4 h-4" />
-            <span>npm install -g @piyushkumariiitj/lumina-cli</span>
+            <span>npm install -g @piyushkumariiitj/lumina-cli@latest</span>
             {copied ? <Check className="w-4 h-4 text-black" /> : <Copy className="w-4 h-4 text-black" />}
           </button>
         </div>

@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   const copyCommand = () => {
-    navigator.clipboard.writeText("npm i -g @piyushkumariiitj/lumina-cli");
+    navigator.clipboard.writeText("npm i -g @piyushkumariiitj/lumina-cli@latest");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -117,7 +117,7 @@ export default function Navbar() {
               >
                 <span className="flex items-center gap-2">
                   <Terminal className="w-3.5 h-3.5 text-[#e8b339]" />
-                  npm i -g @piyushkumariiitj/lumina-cli
+                  npm i -g @piyushkumariiitj/lumina-cli@latest
                 </span>
                 {copied ? <Check className="w-3.5 h-3.5 text-[#5fd787]" /> : <Copy className="w-3.5 h-3.5 text-[#64748b]" />}
               </button>
